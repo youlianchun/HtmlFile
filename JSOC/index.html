@@ -6,8 +6,8 @@
     <script language="javascript" text="text/javascript">
         function inputClick() {
             var res = prompt('Hello', '请输入:');
-            var textValue = (response);
-            document.getElementById('returnValue').value = 'prompt '+res;
+            var textValue = (res);
+            document.getElementById('returnValue').value = 'prompt '+textValue;
         }
         function confirmClick(){
             var res = confirm('Helloo');
@@ -20,7 +20,6 @@
         function alertClick(){
             var res = alert('Hello');
             document.getElementById('returnValue').value = 'alert 确认';
-
         }
     </script>
 </head>
@@ -34,6 +33,10 @@
     <textarea id="returnValue" type="value" rows="5" cols="40"></textarea>
     <p>
     <h1>JS交互测试</h1>
+    
+    <input type="button" value="windiw.ocModelk" onclick="window.location.href('ocModel.html')">
+    <input type="button" value="windiw.webKit" onclick="window.open('webKit.html')">
+        
     <a href="ocModel.html" target="_blank">windiw.ocModelk</a>
     <a href="webKit.html" target="">windiw.webKit</a>
     <h1>打开_blank链接</h1>
