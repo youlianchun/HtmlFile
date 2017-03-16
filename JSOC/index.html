@@ -7,14 +7,14 @@
         function inputClick() {
             var response = prompt('Hello', '请输入:');
             var textValue = (response);
-            document.getElementById('returnValue').value = textValue;
+            document.getElementById('returnValue').value = 'prompt '+textValue;
         }
         function confirmClick(){
             var res = confirm('Helloo');
             if(res) {
-                document.getElementById('returnValue').value = '确认';
+                document.getElementById('returnValue').value = 'confirm 确认';
             }else{
-                document.getElementById('returnValue').value = '取消';
+                document.getElementById('returnValue').value = 'confirm 取消';
             }
         }
         function alertClick(){
