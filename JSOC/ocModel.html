@@ -67,15 +67,22 @@
     <h1>无参+无返回</h1>
     <input type="button" value="随机标题" onclick="randomTitleClick()" />
     <h1>有参+无返回</h1>
-    <input type="button" value="固定标题" onclick="setTitleClick()" />
-    <textarea id="aTitle" type="value" rows="1" cols="10">固定标题</textarea>
+    <table>
+        <tr>
+            <td><input type="button" value="固定标题" onclick="setTitleClick()" /></td>
+            <td><textarea id="aTitle" type="value" rows="1" cols="10">固定标题</textarea></td>
+        </tr>
+    </table>
     <h1>无参+有返回</h1>
-    <input type="button" value="获取app本号" onclick="getAppVersionClick()" />
-    <textarea id="appVersion" type="value" rows="1" cols="10"></textarea>
+    <table>
+        <tr>
+            <td><input type="button" value="获取app本号" onclick="getAppVersionClick()" /></td>
+            <td><textarea id="appVersion" type="value" rows="1" cols="10"></textarea></td>
+        </tr>
+    </table>
     <h1>有参+有返回</h1>
     <input type="button" value="求和 A+B" onclick="sumABClick()" />
     <input type="button" value="求差 A-B" onclick="subABClick()" />
-
     <table>
         <tr>
             <th>A</th>
