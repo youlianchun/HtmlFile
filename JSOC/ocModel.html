@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <title>JS交互测试ocModel</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+    <script language="javascript" text="text/javascript">
+        function resAB(res) {
+            asyncAlert(res);
+            document.getElementById('returnAB').value = res;
+        }
+
+        function asyncAlert(content) {
+            setTimeout(function() {
+                alert(content);
+            }, 0.2);
+        }
+
+        window.onload = function() {
+            getAppVersionClick();
+        }
+
+        //
+        function randomTitleClick() {
+            if (window.ocModel) {
+                window.ocModel.randomTitle();
+            }
+        }
+
+        function setTitleClick() {
+            var title = document.getElementById('aTitle').value;
+            if (window.ocModel) {
+                window.ocModel.setTitle([title]);
+            }
+        }
+
+        function getAppVersionClick() {
+            if (window.ocModel) {
+                window.ocModel.getAppVersion(function(res) {
+                    asyncAlert(res);
+                    document.getElementById('appVersion').value = res;
+                });
+            }
+        }
+
+        function sumABClick() {
+            var a = document.getElementById('inputA').value;
+            var b = document.getElementById('inputB').value;
+            if (window.ocModel) {
+                window.ocModel.sumAB([a, b], function(res) {
+                    asyncAlert(res);
+                    document.getElementById('returnAB').value = res;
+                });
+            }
+        }
+
+        function subABClick() {
+            var a = document.getElementById('inputA').value;
+            var b = document.getElementById('inputB').value;
+            if (window.ocModel) {
+                window.ocModel.subAB([a, b], resAB);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>无参+无返回</h1>
+    <input type="button" value="随机标题" onclick="randomTitleClick()" />
+    <h1>有参+无返回</h1>
+    <input type="button" value="固定标题" onclick="setTitleClick()" />
+    <textarea id="aTitle" type="value" rows="1" cols="10">固定标题</textarea>
+    <h1>无参+有返回</h1>
+    <input type="button" value="获取app本号" onclick="getAppVersionClick()" />
+    <textarea id="appVersion" type="value" rows="1" cols="10"></textarea>
+    <h1>有参+有返回</h1>
+    <input type="button" value="求和 A+B" onclick="sumABClick()" />
+    <input type="button" value="求差 A-B" onclick="subABClick()" />
+
+    <table>
+        <tr>
+            <th>A</th>
+            <td><textarea id="inputA" type="value" rows="1" cols="10">10</textarea></td>
+            <th>+B</th>
+            <td><textarea id="inputB" type="value" rows="1" cols="10">2</textarea></td>
+            <th>=AB</th>
+            <td><textarea id="returnAB" type="value" rows="1" cols="10"></textarea></td>
+        </tr>
+    </table>
+    <h1>--</h1>
+</body>
+
+</html>

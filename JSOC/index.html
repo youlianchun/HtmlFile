@@ -3,9 +3,18 @@
     <head>
         <title>JS交互测试 Link </title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+        <script language="javascript" text="text/javascript">
+            function inputClick() {
+                    var response = prompt('Hello', '请输入:');
+                    var textValue = (response);
+                    document.getElementById('returnValue').value = textValue;
+                }
+        </script>
    </head>
     <body>
         <h1>JS交互测试 windiw.ocModelk (_blank)</h1>
+        <input type="button" value="点击触发JS输入方法 " onclick="inputClick()">
+
         <a href="https://youlianchun.github.io/HtmlFile/jsoc_index2.html" target="_blank">windiw.ocModelk</a>
         <h1>JS交互测试 windiw.webKit </h1>
         <a href="https://youlianchun.github.io/HtmlFile/jsoc_index2.html" target="">windiw.webKit</a>
@@ -20,6 +29,8 @@
         <a href="mqq://im/chat?chat_type=wpa&uin=985050622&version=1&src_type=web">跳转QQ</a>
         <h1>选择文件</h1>
         <input type="file" />
+        <h1>回调结果</h1>
+        <textarea id ="returnValue" type="value" rows="5" cols="40"></textarea>
         <p><font size="5" face="arial" color="red">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</font></p>
     </body>
 </html>
