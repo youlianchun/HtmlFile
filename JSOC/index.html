@@ -5,9 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
     <script language="javascript" text="text/javascript">
         function inputClick() {
-            var response = prompt('Hello', '请输入:');
+            var res = prompt('Hello', '请输入:');
             var textValue = (response);
-            document.getElementById('returnValue').value = 'prompt '+textValue;
+            document.getElementById('returnValue').value = 'prompt '+res;
         }
         function confirmClick(){
             var res = confirm('Helloo');
@@ -18,7 +18,9 @@
             }
         }
         function alertClick(){
-            alert('Hello');
+            var res = alert('Hello');
+            document.getElementById('returnValue').value = 'alert 确认';
+
         }
     </script>
 </head>
